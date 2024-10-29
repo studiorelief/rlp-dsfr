@@ -1,0 +1,8 @@
+.fil-ariane_link:hover > .fil-ariane_line {
+  height: 1.5px;
+  margin-top: -0.5px;
+}
+
+.fil-ariane_link.w--current > .fil-ariane_line {
+  opacity: 0;
+}

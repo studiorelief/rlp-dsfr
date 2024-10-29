@@ -1,0 +1,8 @@
+/* navbar current page */
+.navbar_link .navbar_line {
+  opacity: 0;
+}
+
+.navbar_link.w--current .navbar_line {
+  opacity: 1;
+}
