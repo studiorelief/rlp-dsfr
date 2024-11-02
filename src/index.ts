@@ -1,47 +1,17 @@
-import './index.css';
-import './utils/global/darkMode';
+// Import DSFR core - Modifions l'ordre et ajoutons les imports manquants
+import '@gouvfr/dsfr/dist/dsfr.min.css';
+import '@gouvfr/dsfr/dist/dsfr.module.js';
 
-import { darkmode } from './utils/global/darkMode';
-import { loadScript } from './utils/global/loadScript';
-import { navbarScroll } from './utils/global/navbar';
 // import { launchMarkerSDK } from './utils/global/marker';
+// import '@gouvfr/dsfr/dist/dsfr.nomodule.js';
+// import '@gouvfr/dsfr/dist/utility/utility.css';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
-  Promise.all([
-    loadScript('https://cdn.jsdelivr.net/npm/@finsweet/attributes-accordion@1/accordion.js'),
-  ]);
-
-  // Recettage
-  // if (window.location.hostname.includes('webflow.io')) {
+  // recettage staging
+  // if (window.location.href.includes('webflow.io')) {
   //   launchMarkerSDK();
   // }
-
-  // Global
-  navbarScroll();
-  darkmode(
-    // variables
-    `
-    brand-color--color-rlp-orange,
-    brand-color--color-rlp-blue,
-    text-color--text-default-grey,
-    text-color--text-title-grey,
-    text-color--text-inverted-grey,
-    text-color--text-inverted-blue-france,
-    text-color--text-action-high-blue-france,
-    text-color--text-mention-grey,
-    background-color--background-default-grey,
-    background-color--background-alt-blue-france,
-    background-color--background-action-high-blue-france,
-    background-color--background-raised-grey,
-    background-color--background-transparent-hover,
-    background-color--background-alt-grey,
-    border-color--border-default-grey,
-    border-color--border-active-blue-france
-    `.replace(/\s+/g, ''),
-    // durée
-    0,
-    // ease
-    'power1.out'
-  );
+  // Set dark mode scheme
+  document.documentElement.setAttribute('data-fr-scheme', 'system');
 });
