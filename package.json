@@ -11,10 +11,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/finsweet/developer-starter.git"
+    "url": "git+https://github.com/studiorelief/rlp-dsfr.git"
   },
   "bugs": {
-    "url": "https://github.com/finsweet/developer-starter/issues"
+    "url": "https://github.com/studiorelief/rlp-dsfr/issues"
   },
   "type": "module",
   "main": "src/index.ts",
@@ -52,7 +52,10 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
-    "@finsweet/ts-utils": "^0.40.0"
+    "@finsweet/ts-utils": "^0.40.0",
+    "@gouvfr/dsfr": "^1.12.1",
+    "@marker.io/browser": "^0.19.0",
+    "gsap": "^3.12.5"
   },
   "engines": {
     "pnpm": ">=9"

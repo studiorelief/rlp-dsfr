@@ -26,6 +26,12 @@ const context = await esbuild.context({
   define: {
     SERVE_ORIGIN: JSON.stringify(SERVE_ORIGIN),
   },
+  loader: {
+    '.svg': 'dataurl',
+    '.css': 'css',
+    '.woff': 'file',
+    '.woff2': 'file',
+  },
 });
 
 // Build files in prod
